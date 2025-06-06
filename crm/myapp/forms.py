@@ -35,14 +35,14 @@ class SignUpForm(UserCreationForm):
 
 
 class AddRecordForm(forms.ModelForm):
-    first_name = forms.CharField(required=True, max_length=100, widget=forms.TextInput(attrs={'placeholder': 'First Name', 'class': 'form-control'}) , label="")
-    last_name =forms.CharField(required=True, max_length=100, widget=forms.TextInput(attrs={'placeholder': 'Last Name', 'class': 'form-control'}),label="")
-    email =forms.CharField(required=True, max_length=100, widget=forms.TextInput(attrs={'placeholder': 'Email', 'class': 'form-control'}),label="")
-    phone = forms.CharField(required=True, max_length=100, widget=forms.TextInput(attrs={'placeholder': 'Phone', 'class': 'form-control'}),label="")
-    address =forms.CharField(required=True, max_length=100, widget=forms.TextInput(attrs={'placeholder': 'Address', 'class': 'form-control'}),label="")
-    city =forms.CharField(required=True, max_length=100, widget=forms.TextInput(attrs={'placeholder': 'City', 'class': 'form-control'}),label="")
-    state =forms.CharField(required=True, max_length=100, widget=forms.TextInput(attrs={'placeholder': 'State', 'class': 'form-control'}),label="")
-    zip_code =forms.CharField(required=True, max_length=100, widget=forms.TextInput(attrs={'placeholder': 'zip_code', 'class': 'form-control'}),label="")
+    
+    product_name = forms.CharField(required=True, max_length=100, widget=forms.TextInput(attrs={'placeholder': 'Product Name', 'class': 'form-control'}) , label="")
+    product_Price =forms.CharField(required=True, max_length=100, widget=forms.TextInput(attrs={'placeholder': 'Product Price ', 'class': 'form-control'}),label="")
+    selling_price = forms.CharField(required=True, max_length=100, widget=forms.TextInput(attrs={'placeholder': 'Selling Price', 'class': 'form-control'}),label="")
+    perchase_price =forms.CharField(required=True, max_length=100, widget=forms.TextInput(attrs={'placeholder': 'Purchase Price', 'class': 'form-control'}),label="")
+    quantity =forms.CharField(required=True, max_length=100, widget=forms.TextInput(attrs={'placeholder': 'Quantity', 'class': 'form-control'}),label="")
+    warranty_period =forms.CharField(required=False, max_length=100, widget=forms.TextInput(attrs={'placeholder': 'Warranty Period', 'class': 'form-control'}),label="")
+    brand =forms.CharField( max_length=100, widget=forms.TextInput(attrs={'placeholder': 'Brand', 'class': 'form-control'}),label="")
 
     class Meta:
         model = Record
