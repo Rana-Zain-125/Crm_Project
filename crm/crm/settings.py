@@ -125,3 +125,5 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+USE_TZ = True
+TIME_ZONE = 'Asia/Karachi'

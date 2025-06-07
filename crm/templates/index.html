@@ -1,4 +1,5 @@
 {% load static %}
+{% load tz %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -42,7 +43,7 @@
                 {% for record in records %}
                 <tr>
                     <td><a href="{% url "record" record.id %}" >{{ record.id }}</a></td>
-                    <td>{{ record.sold_At }}</td>
+                    <td>{{ record.sold_At|localtime }}</td>
                     <td>{{ record.product_name }} </td>
                     <td>{{ record.product_Price }}</td>
                     <td>{{ record.selling_price }}</td>
